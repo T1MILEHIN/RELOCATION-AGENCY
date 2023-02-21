@@ -1,0 +1,667 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+input#night,
+input#nav {
+    display: none;
+}
+
+header,
+a,
+section,
+section h1, 
+section h2, 
+section h3, 
+section form,
+input {
+    transition: all 500ms ease-in-out;
+}
+
+body:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: -1;
+}
+
+input#night:checked ~ header {
+    color: white;
+    background-color: #0a0a0a;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 1vh 6vw 1vh 6vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+}
+
+header>div.logo>div {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+header>div.logo>div i {
+    font-size: 2rem;
+    color: #f34235;
+}
+
+header>div:nth-child(2) nav ul {
+    list-style: none;
+}
+
+header>div:nth-child(2) nav ul i {
+    font-size: 2rem;
+}
+
+header>div:nth-child(2) nav ul li {
+    display: inline-block;
+    padding: .5vh 1vw;
+    position: relative;
+}
+
+header>div:nth-child(2) nav ul a:first-child li::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #f34235;
+    height: 2px;
+    width: 100%;
+}
+
+header>div:nth-child(2) nav ul a {
+    text-decoration: none;
+    color: black;
+}
+
+input#night:checked ~ header>div:nth-child(2) nav ul a {
+    color: white;
+}
+
+header>div:nth-child(2) nav ul a li::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #f34235;
+    height: 2px;
+    width: 0;
+    transition: all 500ms ease-in-out;
+}
+
+header>div:nth-child(2) nav ul a li:hover::after {
+    width: 100%;
+}
+
+header>div:last-child label:first-child i {
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+header>div:last-child label:last-child {
+    display: none;
+}
+
+div.carousel-item img {
+    height: 100vh;
+}
+
+input#night:checked ~ section.works {
+    background-color: black;
+    color: white;
+}
+
+section.landing {
+    position: relative;
+}
+
+section.landing>div:last-child {
+    position: absolute;
+    left: 6vw;
+    right: 60vw;
+    top: 40vh;
+    bottom: 0;
+    color: white;
+    background-image: linear-gradient(to right, #f34235 50%, #f34235b9);
+    padding: 3%;
+    width: fit-content;
+}
+
+section.landing>div:last-child h1 {
+    font-size: 2.3rem;
+    letter-spacing: 2px;
+    line-height: 1.5;
+}
+
+section.landing>div:last-child h1 span {
+    font-weight: 900;
+}
+
+section.landing>div:last-child p {
+    font-size: 1rem;
+    padding: 4vh 0;
+}
+
+section.landing>div:last-child a {
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    padding: 15px 25px;
+    border-radius: 25px;
+    font-weight: 600;
+}
+
+section.landing div.carousel-item img {
+    /* height: 100vh; */
+    width: 100%;
+}
+
+section.works {
+    padding: 10vh 6vw;
+    background-color: white;
+}
+
+section.works h1 {
+    text-align: center;
+    font-size: 2rem;
+}
+
+section.works>div {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
+    gap: 3vw;
+    margin: 10vh 0;
+}
+
+section.works>div>div {
+    padding: 5%;
+    transition: all 500ms ease-in-out;
+}
+
+section.works>div>div:hover {
+    background-color:#f34235;
+}
+
+section.works>div>div i {
+    font-size: 3rem;
+    color: #f34235;
+    transition: all 500ms ease-in-out;
+}
+
+section.works>div>div:hover i {
+    color: white;
+    transform: rotateY(180deg);
+}
+
+section.works>div>div h3 {
+    font-weight: 900;
+    margin: 3vh 0;
+    transition: all 500ms ease-in-out;
+}
+
+section.works>div>div:hover h3 {
+    color: white;
+}
+
+section.works>div>div p {
+    color: gray;
+    font-size: 1.1rem;
+    transition: all 500ms ease-in-out;
+}
+
+section.works>div>div:hover p {
+    color: white;
+}
+
+input#night:checked ~ section.exp {
+    background-color: black;
+    color: white;
+}
+
+section.exp {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    /* grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); */
+    padding: 10vh 6vw;
+    gap: 4vw;
+    background-color: white;
+}
+
+section.exp>div:first-child img,
+section.exp>div:last-child {
+    width: 100%;
+}
+
+section.exp>div {
+    grid-column: span 6;
+}
+
+section.exp>div:last-child h1 {
+    font-weight: 900;
+}
+
+section.exp>div:last-child h1 span {
+    color: #f34235;
+}
+
+section.exp>div:last-child>p {
+    color: gray;
+    margin: 5vh 0;
+    font-size: 1.2rem;
+}
+
+div.delivery>div {
+    display: flex;
+    gap: 1vw;
+    justify-content: flex-start;
+}
+
+div.delivery>div i {
+    color: #f34235;
+}
+
+div.delivery>div>div h4 {
+    font-size: 1.4rem;
+    font-weight: 900;
+}
+
+div.delivery>div>div p {
+    color: gray;
+}
+
+div.delivery>div i {
+    font-size: 3rem;
+}
+
+
+section.fixed-bg {
+    background-image: url(../images/bg1.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: end;
+    background-color: rgba(255, 255, 255, 0);
+    position: relative;
+    padding: 5vh 6vw;
+}
+
+section.fixed-bg:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    /* z-index: -1; */
+}
+
+section.fixed-bg>div {
+    position: relative;
+    z-index: 3;
+}
+
+section.fixed-bg>div form h1 {
+    font-weight: 900;
+}
+
+input#night:checked ~ section.fixed-bg>div form {
+    background-color: black;
+    color: white;
+}
+
+section.fixed-bg>div form {
+    margin: 6vh 0;
+    padding: 4% 4%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+section.fixed-bg>div form>div input,
+section.fixed-bg>div form>div textarea {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid gray;
+    margin: 2vh 0;
+    height: 5vh;
+    padding-left: 5px;
+    background-color: rgba(0, 0, 0, 0);
+    color: gray;
+}
+
+section.fixed-bg>div form>div :focus {
+    outline: none;
+}
+section.fixed-bg>div form>div textarea {
+    height: 15vh;
+    resize: none;
+}
+
+section.fixed-bg>div form>div:last-child button {
+    border: none;
+    background-color: #f34235;
+    padding: 10px 24px;
+    color: white;
+    font-weight: 600;
+    border-radius: 30px;
+}
+
+input#night:checked ~ section#service {
+    background-color: black;
+    color: white;
+}
+
+section#service {
+    padding: 4vh 6vw;
+    background-color: white;
+}
+
+section#service>h1 {
+    text-align: center;
+    margin: 10vh 0;
+}
+
+div.service>div {
+    display: flex;
+    /* gap: 3vw; */
+    border: 1px solid #eeeeee;
+}
+
+div.service>div>div {
+    padding: 2%;
+    border: 1px solid #eeeeee;
+    transition: all 500ms ease-in-out;
+}
+
+div.service>div>div i:nth-child(4) {
+    transition: all 500ms ease-in-out;
+    transform: rotateY(0);
+}
+
+div.service>div>div:hover {
+    background-color: #f34235;
+    color: white;
+}
+
+div.service>div>div:hover  p,a {
+    color: white;
+}
+
+div.service>div>div:hover i:nth-child(4) {
+    transform: rotateY(180deg);
+    color: white;
+}
+
+div.service>div>div h3 {
+    font-weight: 900;
+    transition: all 500ms ease-in-out;
+    cursor: pointer;
+    width: fit-content;
+}
+
+div.service>div>div p {
+    margin: 3vh 0;
+    color: gray;
+    font-size: 1.1rem;
+    transition: all 500ms ease-in-out;
+}
+
+div.service>div>div a {
+    text-decoration: none;
+    color: black;
+    font-weight: 900;
+}
+
+div.service>div>div>div a {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    transition: all 500ms ease-in-out;
+}
+
+div.service>div>div>div a:hover {
+    color: white;
+    gap: 15px;
+}
+
+div.service>div>div i:nth-child(4) {
+    font-size: 3rem;
+    color: #f34235;
+    margin: 3vh 0;
+}
+
+section#service>div:last-child {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+} 
+
+section#service>div:last-child>div:last-child {
+    display: flex;
+    gap: 1vw;
+    align-items: center;
+    margin: 10vh 0;
+}
+
+section#service>div:last-child>div:last-child p:first-child {
+    font-size: 2rem;
+    letter-spacing: 2px;
+    font-weight: 900;
+    transition: COLOR 500MS ease-in-out;
+    cursor: pointer;
+}
+
+section#service>div:last-child>div:last-child p:first-child:hover {
+    color: #f34235;
+}
+
+section#service>div:last-child>div:last-child p:nth-child(2) {
+    color: gray;
+}
+
+section#service>div:last-child>div:last-child a {
+    border: none;
+    background-color: #f34235;
+    padding: 10px 24px;
+    color: white;
+    font-weight: 600;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: all 500ms ease-in-out;
+}
+
+section#service>div:last-child>div:last-child a:hover {
+    background-color: black;
+}
+
+footer {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    padding: 4vh 6vw;
+    gap: 3vw;
+    background-color: #0a0a0a;
+    color: white;
+}
+
+footer>div {
+    grid-column: span 6;
+}
+
+footer>div:first-child p {
+    margin: 3vh 0;
+}
+
+footer>div:first-child >div {
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+}
+
+footer>div:first-child >div i {
+    font-size: 1rem;
+    background-color: #181818;
+    padding: 1rem 1.1rem;
+    border-radius: 50%;
+    transition: all 500ms ease-in-out;
+}
+
+footer>div:first-child >div i:hover {
+    color: #f34235;
+    transform: scale(1.3);
+}
+
+footer>div:last-child table th,
+footer>div:last-child table td {
+    padding: 1rem;
+    width: fit-content;
+    text-align: left;
+}
+
+footer>div:last-child table td a {
+    color: #e0e0e0;
+    text-decoration: none;
+    transition: all 500ms ease-in-out;
+    display: flex;
+    align-items: center;
+    gap: 0;
+}
+
+footer>div:last-child table td a:hover {
+    color: #f34235;
+    /* gap: 2px; */
+    scale: 1.1;
+}
+
+div.copyright {
+    text-align: center;
+    background-color: #0a0a0a;
+    padding: 5vh 6vw;
+}
+
+div.copyright p {
+    color: #e0e0e0;
+}
+
+div.copyright p span {
+    color: white;
+    font-weight: 900;
+    letter-spacing: 2px;
+    font-size: 1.2rem;
+}
+
+@media only screen and (max-width:991px){
+    header {
+        /* height: 12vh; */
+        padding: 1vh 6vw;
+        overflow: hidden;
+    }
+    nav.nav {
+        display: none;
+    }
+
+    header>div:last-child {
+        display: flex;
+        align-items: center;
+        gap: 6vw;
+    }
+
+    header>div:last-child label:last-child {
+        display: block;
+        font-size: 1.3rem;
+        background-color: #f34235;
+        padding: 1% 10%;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+
+    input#nav,
+    input#night {
+        display: none;
+    }
+
+    nav.nav {
+        position: absolute;
+        top: 85px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        display: block;
+        text-align: center;
+    }
+    input#nav:checked ~ header {
+        padding-bottom: 160px;
+    } 
+    nav.nav ul {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    section.landing>div:last-child {
+        bottom: 0;
+        left: 2vw;
+        right: 2vw;
+    }
+    section.exp>div {
+        grid-column: span 12;
+    }
+    section.fixed-bg {
+        justify-content: center;
+    }
+    div.service>div,
+    section#service>div:last-child {
+        flex-wrap: wrap;
+    }
+
+    section#service>div:last-child>div:last-child {
+        justify-content: space-evenly;
+        gap: 1vw;
+    }
+
+    section#service>div:last-child>div:last-child p:first-child {
+        font-size: 1rem;
+    }
+    div.service>div>div {
+        padding: 10%;
+    }
+
+    footer {
+        padding: 4vh 1vw;
+    }
+
+    footer>div {
+        grid-column: span 12;
+    }
+
+    footer>div:last-child th {
+        font-size: .6rem;
+    }
+
+    footer>div:last-child td {
+        font-size: .6rem;
+    }
+
+    div.copyright p {
+        font-size: .9rem;
+    }
+    div.copyright p span {
+        font-size: 1rem;
+    }
+}
