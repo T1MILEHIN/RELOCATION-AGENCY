@@ -313,7 +313,7 @@ footer>div:last-child table td a {
 footer>div:last-child table td a:hover {
     color: #f34235;
     /* gap: 2px; */
-    scale: 1.1;
+    scale: 1.3;
 }
 
 div.copyright {
@@ -413,7 +413,7 @@ div.copyright p span {
     }
 
     footer>div:last-child th {
-        font-size: .6rem;
+        font-size: .5rem;
     }
 
     footer>div:last-child td {
