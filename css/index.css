@@ -6,6 +6,11 @@
     font-family: 'Poppins', sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
 input#night,
 input#nav {
     display: none;
@@ -572,6 +577,7 @@ div.copyright p span {
         /* height: 12vh; */
         padding: 1vh 6vw;
         overflow: hidden;
+        width: 100vw;
     }
     div.carousel-item img {
         object-fit: cover;
