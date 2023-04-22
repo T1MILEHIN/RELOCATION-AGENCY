@@ -151,11 +151,13 @@ section.contact>h1 {
 section.contact>div {
     display: flex;
     justify-content: space-around;
+     width: 100%;
 }
 
 section.contact>div>div {
     text-align: center;
     flex: 1 0 1;
+    flex-basis: 25%;
 }
 
 section.contact>div>div i {
@@ -322,6 +324,9 @@ div.copyright p span {
     }
     section.contact>div>div p {
         font-size: 1.2rem;
+    }
+    section.contact>div>div {
+        flex-basis: 100%;
     }
 
 
