@@ -139,7 +139,7 @@ section.landing {
 
 section.landing>div:last-child {
     position: absolute;
-    left: 6vw;
+    left: 0vw;
     right: 60vw;
     top: 40vh;
     bottom: 0;
